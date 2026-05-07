@@ -118,7 +118,13 @@
       text-transform: uppercase;
     }
 
-    /* IMAGENS COM HOVER */
+    /* PARALLAX */
+    .parallax {
+      transform: translateY(0px);
+      transition: transform 0.1s linear;
+    }
+
+    /* IMAGE HOVER */
     .hero-image img {
       width: 100%;
       border-radius: 16px;
@@ -192,7 +198,7 @@
       gap: 8px;
     }
 
-    /* FADE-IN ANIMATION */
+    /* FADE-IN */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -234,7 +240,7 @@
       </div>
 
       <div class="hero-image">
-        <img src="frente_costas.png" />
+        <img src="frente_costas.png" class="parallax" />
       </div>
     </section>
 
@@ -242,8 +248,8 @@
       <div class="section-title">About the brand</div>
       <h2 class="section-heading">What is ERROR 404 LABEL?</h2>
       <p class="section-text">
-        ERROR 404 LABEL turns the digital concept of “404 Not Found” into physical fashion: rare pieces,
-        hard to find, created for those who value exclusivity, quality and identity.
+        ERROR 404 LABEL turns the digital concept of “404 Not Found” into physical fashion:
+        rare pieces, hard to find, created for those who value exclusivity, quality and identity.
       </p>
     </section>
 
@@ -277,7 +283,7 @@
       </div>
 
       <div class="hero-image">
-        <img src="etiqueta_1.png" />
+        <img src="etiqueta_1.png" class="parallax" />
       </div>
     </section>
 
@@ -286,8 +292,8 @@
       <h2 class="section-heading">Premium, collectible packaging</h2>
       <div class="packaging">
         <p class="section-text">
-          Each piece comes with a carefully designed unboxing experience, aligned with the brand’s
-          minimalist and collectible DNA:
+          Each piece comes with a carefully designed unboxing experience,
+          aligned with the brand’s minimalist and collectible DNA:
         </p>
         <ul class="list">
           <li>Rigid minimalist box (matte finish)</li>
@@ -320,16 +326,25 @@
 
   </div>
 
-  <!-- Fade-in script -->
+  <!-- Fade-in + Parallax script -->
   <script>
+    /* Fade-in */
     const elements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.2 });
-
     elements.forEach(el => observer.observe(el));
+
+    /* Parallax */
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.parallax').forEach(img => {
+        const speed = 0.15;
+        const offset = window.scrollY * speed;
+        img.style.transform = `translateY(${offset}px)`;
+      });
+    });
   </script>
 
 </body>
