@@ -118,6 +118,12 @@
       text-transform: uppercase;
     }
 
+    /* PARALLAX IMAGES */
+    .parallax {
+      transform: translateY(0px);
+      transition: transform 0.1s linear;
+    }
+
     /* IMAGENS COM HOVER */
     .hero-image img {
       width: 100%;
@@ -235,7 +241,7 @@
       </div>
 
       <div class="hero-image">
-        <img src="frente_costas.png" />
+        <img src="frente_costas.png" class="parallax" />
       </div>
     </section>
 
@@ -281,7 +287,7 @@
       </div>
 
       <div class="hero-image">
-        <img src="etiqueta_1.png" />
+        <img src="etiqueta_1.png" class="parallax" />
       </div>
     </section>
 
@@ -324,16 +330,25 @@
 
   </div>
 
-  <!-- Fade-in script -->
+  <!-- Fade-in + Parallax script -->
   <script>
+    /* Fade-in */
     const elements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.2 });
-
     elements.forEach(el => observer.observe(el));
+
+    /* Parallax */
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.parallax').forEach(img => {
+        const speed = 0.15;
+        const offset = window.scrollY * speed;
+        img.style.transform = `translateY(${offset}px)`;
+      });
+    });
   </script>
 
 </body>
