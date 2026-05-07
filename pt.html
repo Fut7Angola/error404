@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>ERROR 404 LABEL — issue_001</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050505;
+      --fg: #f5f5f5;
+      --accent: #ffffff;
+      --muted: #999999;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", Arial, sans-serif;
+      --max-width: 1080px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      margin-bottom:48px;
+    }
+
+    .lang-toggle {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .lang-toggle a.active { color: var(--fg); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .hero-text {
+      font-size: 14px;
+      max-width: 420px;
+      margin-bottom: 24px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #000;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--fg);
+    }
+
+    .microcopy {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 8px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid #222;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section { margin-bottom: 56px; }
+
+    .section-title {
+      font-size: 14px;
+      letter-letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+
+    .section-heading { font-size: 20px; margin-bottom: 12px; }
+
+    .section-text {
+      font-size: 14px;
+      max-width: 640px;
+      color: #d0d0d0;
+    }
+
+    .list { margin-top: 12px; font-size: 14px; color: #d0d0d0; }
+    .list li { margin-bottom: 6px; list-style: none; }
+    .list li::before { content: "• "; color: var(--muted); }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .quote {
+      margin-top: 16px;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .packaging {
+      border-radius: 16px;
+      border: 1px solid #222;
+      padding: 20px;
+      background: #0b0b0b;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #222;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .grid-two { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <img src="logo_erro404.png" alt="ERROR 404 LABEL" style="height:120px; width:auto;" />
+      <div class="lang-toggle">
+        <a href="index.html">EN</a> / <a href="pt.html" class="active">PT</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="hero-title">issue_001 — 404 unidades</div>
+        <div class="hero-subtitle">Coleção limitada. Peças numeradas. Streetwear premium.</div>
+        <p class="hero-text">
+          A ERROR 404 LABEL é uma marca independente de streetwear premium,
+          minimalista e colecionável. Cada coleção é limitada a <strong>404 unidades</strong>,
+          todas numeradas — nunca reeditadas.
+        </p>
+        <a href="#" class="btn-primary">Aceder ao Kickstarter</a>
+        <div class="microcopy">Edição limitada · Zero reedições</div>
+      </div>
+
+      <div class="hero-image">
+        <img src="frente_costas.png" style="width:100%; border-radius:12px;" />
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Sobre a marca</div>
+      <h2 class="section-heading">O que é a ERROR 404 LABEL?</h2>
+      <p class="section-text">
+        A ERROR 404 LABEL transforma o conceito digital “404 Not Found” em moda física:
+        peças raras, difíceis de encontrar, pensadas para quem valoriza exclusividade,
+        qualidade e identidade.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Porquê 404?</div>
+      <h2 class="section-heading">404 não é um erro. É identidade.</h2>
+      <p class="section-text">
+        O código “404 Not Found” representa algo que não foi encontrado — raro, perdido,
+        fora do sistema. É exatamente essa ideia que transportamos para a roupa:
+        peças que não aparecem em qualquer lado, que não seguem o padrão, que existem
+        em número limitado.
+      </p>
+      <p class="quote">“Se encontraste isto, és dos poucos.”</p>
+    </section>
+
+    <section class="grid-two">
+      <div>
+        <div class="section-title">O produto</div>
+        <h2 class="section-heading">issue_001 — a primeira peça</h2>
+        <p class="section-text">
+          A primeira peça da ERROR 404 LABEL é uma t-shirt premium, com design minimalista
+          e humor subtil inspirado no universo 404. Pensada como um item colecionável,
+          cada unidade é numerada.
+        </p>
+        <ul class="list">
+          <li>Edição limitada a 404 unidades</li>
+          <li>Peças numeradas (etiqueta + impressão)</li>
+          <li>Impressão premium frente e costas</li>
+          <li>Algodão de qualidade superior</li>
+          <li>Corte moderno e confortável</li>
+          <li>Nunca será reeditada</li>
+        </ul>
+      </div>
+
+      <div class="hero-image">
+        <img src="etiqueta_1.png" style="width:100%; border-radius:12px;" />
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Packaging</div>
+      <h2 class="section-heading">Packaging premium e colecionável</h2>
+      <div class="packaging">
+        <p class="section-text">
+          Cada peça é enviada com uma experiência de unboxing pensada ao detalhe,
+          alinhada com o ADN minimalista e colecionável da marca:
+        </p>
+        <ul class="list">
+          <li>Caixa rígida minimalista (acabamento mate)</li>
+          <li>Envelope interno numerado</li>
+          <li>Cartão físico de autenticidade</li>
+          <li>Papel seda personalizado</li>
+          <li>Design pensado para guardar, não deitar fora</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Manifesto</div>
+      <h2 class="section-heading">Não seguimos tendências. Criamos raridade.</h2>
+      <p class="section-text">
+        A ERROR 404 LABEL nasce da ideia de que o que é difícil de encontrar tem valor.
+        O mundo está cheio de excesso e cópias — nós escolhemos o oposto:
+        <strong>404 unidades. Zero reedições.</strong>
+      </p>
+      <p class="section-text" style="margin-top:12px;">
+        Cada peça é numerada. Cada detalhe é pensado. Não fazemos roupa para todos —
+        fazemos para quem reconhece o que é especial.
+      </p>
+    </section>
+
+    <footer>
+      <div>ERROR 404 LABEL · Edição limitada · Peças numeradas</div>
+      <div>© 2026 · www.error404label.com</div>
+    </footer>
+
+  </div>
+</body>
+</html>
