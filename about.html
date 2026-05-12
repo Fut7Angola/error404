@@ -79,41 +79,71 @@
 
     /* SECTIONS */
     section {
-      margin-bottom: 56px;
+      margin-bottom: 80px;
     }
 
     .section-title {
-      font-size: 14px;
-      letter-spacing: 0.18em;
+      font-size: 13px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
       color: var(--muted);
+      border-bottom: 1px solid #222;
+      display: inline-block;
+      padding-bottom: 4px;
     }
 
     .section-heading {
-      font-size: 28px;
-      margin-bottom: 16px;
+      font-size: 32px;
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
     .section-text {
-      font-size: 16px;
-      max-width: 700px;
+      font-size: 17px;
+      max-width: 750px;
       color: #d0d0d0;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
-    .quote {
-      margin-top: 16px;
-      font-size: 15px;
-      font-style: italic;
+    .highlight-box {
+      border-left: 2px solid var(--accent);
+      padding-left: 20px;
+      margin: 30px 0;
+    }
+
+    .list-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .list-item::before {
+      content: "—";
+      margin-right: 10px;
       color: var(--muted);
+    }
+
+    .manifesto-box {
+      background: #111;
+      padding: 40px;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    .manifesto-text {
+      font-size: 20px;
+      line-height: 1.8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     /* FADE-IN */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
     .fade-in.visible {
@@ -121,102 +151,80 @@
       transform: translateY(0);
     }
 
-   
+    /* Bandeiras no menu */
+    .lang a {
+      font-size: 18px;
+      margin-left: 4px;
+      margin-right: 4px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
 
-  /* Bandeiras no menu */
-  .lang a {
-    font-size: 18px;
-    margin-left: 4px;
-    margin-right: 4px;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-  }
-
-  .lang a.active {
-    opacity: 1;
-  }
-
-  .lang a:hover {
-    opacity: 1;
-  }   
+    .lang a.active, .lang a:hover {
+      opacity: 1;
+    }
     
-/* FOOTER PREMIUM */
-.footer {
-  border-top: 1px solid #222;
-  padding-top: 40px;
-  margin-top: 60px;
-}
+    /* FOOTER PREMIUM */
+    .footer {
+      border-top: 1px solid #222;
+      padding-top: 40px;
+      margin-top: 60px;
+    }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 32px;
-  margin-bottom: 32px;
-}
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
 
-.footer-col h4 {
-  font-size: 18px;
-  letter-spacing: 0.12em;
-  margin-bottom: 8px;
-}
+    .footer-col h4 {
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
 
-.footer-col h5 {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--muted);
-  margin-bottom: 12px;
-}
+    .footer-col h5 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
 
-.footer-col a {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: var(--fg);
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: var(--fg);
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
 
-.footer-col a:hover {
-  opacity: 1;
-}
+    .footer-col a:hover { opacity: 1; }
 
-.footer-disabled {
-  display: block;
-  font-size: 14px;
-  opacity: 0.3;
-  margin-bottom: 6px;
-}
+    .footer-disabled {
+      display: block;
+      font-size: 14px;
+      opacity: 0.3;
+      margin-bottom: 6px;
+    }
 
-.footer-small {
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 4px;
-}
+    .footer-small {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
 
-.footer-bottom {
-  border-top: 1px solid #222;
-  padding-top: 16px;
-  font-size: 12px;
-  color: var(--muted);
-  text-align: center;
-  opacity: 0.7;
-}
+    .footer-bottom {
+      border-top: 1px solid #222;
+      padding-top: 16px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      opacity: 0.7;
+    }
 
-
-/* Bandeiras */
-.lang a {
-  font-size: 18px;
-  margin-right: 6px;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.lang a.active,
-.lang a:hover {
-  opacity: 1;
-}
-    
   </style>
 </head>
 
@@ -225,102 +233,150 @@
 
     <!-- HEADER -->
     <header class="header">
-      <img src="logo_erro404.png" class="logo-img" />
+      <img src="logo_erro404.png" class="logo-img" alt="ERROR 404 LABEL" />
 
       <nav class="nav">
         <a href="pt.html" class="nav-link">Home</a>
         <a href="product.html" class="nav-link">Produto</a>
         <a href="about.html" class="nav-link" style="color:#fff;">Sobre</a>
         <span class="lang">
-  <a href="index.html">🇬🇧</a>
-  <a href="pt.html" class="active">🇵🇹</a>
-</span>
-
+          <a href="index.html">🇬🇧</a>
+          <a href="pt.html" class="active">🇵🇹</a>
+        </span>
       </nav>
     </header>
 
-    <!-- ABOUT SECTION -->
+    <!-- INTRO -->
     <section class="fade-in">
-      <div class="section-title">Sobre nós</div>
-      <h2 class="section-heading">A identidade por trás da ERROR 404 LABEL</h2>
+      <div class="section-title">O Conceito</div>
+      <h2 class="section-heading">O que não existe torna‑se valioso.</h2>
       <p class="section-text">
-        A ERROR 404 LABEL nasceu da vontade de transformar o conceito digital “404 Not Found”
-        em algo físico, raro e colecionável. O que não é encontrado, o que está fora do sistema,
-        o que não aparece em todo o lado — isso tem valor.
+        A ERROR 404 LABEL nasce de uma ideia simples: num mundo onde tudo é produzido em excesso, a verdadeira raridade é a ausência.
       </p>
       <p class="section-text">
-        Cada peça é pensada como um objeto de coleção. Não seguimos tendências, não produzimos em massa,
-        não repetimos coleções. Criamos peças numeradas, limitadas e intencionais.
+        Vivemos rodeados de produtos descartáveis, coleções infinitas e tendências que duram semanas. A ERROR 404 LABEL é o oposto disso. É uma marca construída sobre o conceito de escassez real, identidade perdida e objetos que não deviam existir.
       </p>
-      <p class="quote">“Se encontraste isto, és dos poucos.”</p>
+      <div class="highlight-box">
+        <p class="section-text" style="font-style: italic;">
+          Tal como o erro digital “404 – Not Found”, cada peça da marca representa algo que foi removido, oculto, apagado do sistema. E é precisamente essa ausência que lhe dá valor.
+        </p>
+      </div>
     </section>
 
-    <!-- MISSION -->
+    <!-- FILOSOFIA -->
     <section class="fade-in">
-      <div class="section-title">Missão</div>
-      <h2 class="section-heading">Criar raridade num mundo cheio de excesso</h2>
+      <div class="section-title">A Filosofia 404</div>
+      <h2 class="section-heading">Se não existe, torna‑se desejado. <br>Se é raro, torna‑se eterno.</h2>
       <p class="section-text">
-        Vivemos numa era de produção infinita, onde tudo é replicado, copiado e descartado.
-        A ERROR 404 LABEL escolhe o caminho oposto: menos quantidade, mais significado.
+        Cada peça da ERROR 404 LABEL é tratada como um artefacto digital materializado. Algo que “não devia estar aqui”, mas que escapou ao sistema.
       </p>
       <p class="section-text">
-        A nossa missão é criar peças que durem, que contem uma história e que tenham valor
-        não apenas pelo design, mas pela intenção por trás de cada detalhe.
+        Por isso, cada lançamento é limitado. Não por marketing. Mas por conceito.
       </p>
     </section>
 
-    <!-- VALUES -->
+    <!-- O PLANO -->
     <section class="fade-in">
-      <div class="section-title">Valores</div>
-      <h2 class="section-heading">O que defendemos</h2>
-      <p class="section-text">• Exclusividade verdadeira — apenas 404 unidades por coleção.</p>
-      <p class="section-text">• Qualidade acima de quantidade.</p>
-      <p class="section-text">• Design minimalista com significado.</p>
-      <p class="section-text">• Transparência e autenticidade.</p>
-      <p class="section-text">• Peças criadas para durar e ser guardadas.</p>
+      <div class="section-title">O Plano Finito</div>
+      <h2 class="section-heading">404 Modelos. 404 Unidades. <br>Depois disso… silêncio.</h2>
+      <p class="section-text">
+        A ERROR 404 LABEL não é uma marca eterna. É um projeto finito, com início, meio e fim. O plano é claro:
+      </p>
+      <div style="margin: 20px 0;">
+        <div class="list-item">404 modelos diferentes</div>
+        <div class="list-item">404 unidades por modelo</div>
+        <div class="list-item">Todas numeradas</div>
+        <div class="list-item">Nunca repetidas</div>
+        <div class="list-item">Nunca reeditadas</div>
+      </div>
+      <p class="section-text">
+        Quando o modelo 404 for lançado, a marca termina. O sistema apaga‑se. O diretório fecha. A história fica completa.
+      </p>
+    </section>
+
+    <!-- ISSUE_001 -->
+    <section class="fade-in">
+      <div class="section-title">ISSUE_001</div>
+      <h2 class="section-heading">O início do fim</h2>
+      <p class="section-text">
+        A primeira peça da ERROR 404 LABEL é o <strong>modelo 001/404</strong>. Uma t‑shirt branca, minimalista, com impressão premium em silicone 3D, numerada e certificada.
+      </p>
+      <p class="section-text">
+        A mensagem frontal — <em>“The object was removed from the system due to excessive rarity”</em> — define o ADN da marca. Não é apenas roupa. É a primeira linha de código de um universo que vai desaparecer.
+      </p>
+    </section>
+
+    <!-- KICKSTARTER -->
+    <section class="fade-in">
+      <div class="section-title">Kickstarter</div>
+      <h2 class="section-heading">Porquê a comunidade?</h2>
+      <p class="section-text">
+        O Kickstarter permite criar uma comunidade desde o primeiro modelo, garantindo produção apenas para quem realmente entende a filosofia de escassez e evita o desperdício da produção em massa.
+      </p>
+      <p class="section-text">
+        Apoiar a ISSUE_001 é apoiar o início de uma história que só terá 404 capítulos. Estás a adquirir um fragmento de um sistema que está a ser apagado.
+      </p>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section id="manifesto" class="fade-in">
+      <div class="manifesto-box">
+        <p class="manifesto-text">
+          Não seguimos tendências.<br>
+          Não repetimos modelos.<br>
+          Não produzimos em massa.<br>
+          Não existimos para sempre.<br><br>
+          <strong>Existimos para desaparecer.<br>
+          E é isso que nos torna valiosos.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="fade-in" style="text-align: center;">
+      <h2 class="section-heading">O futuro já está escrito.</h2>
+      <p class="section-text" style="margin: 0 auto;">
+        E termina no modelo 404. Até lá, cada peça é um erro no sistema. Um glitch. Um objeto que não devia existir. Mas existe — e é teu.
+      </p>
     </section>
 
     <!-- FOOTER -->
-   <footer class="footer">
-  <div class="footer-grid">
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>ERROR 404 LABEL</h4>
+          <p class="footer-small">Edição limitada · 404 unidades · Nunca reeditado</p>
+        </div>
 
-    <div class="footer-col">
-      <h4>ERROR 404 LABEL</h4>
-      <p class="footer-small">Edição limitada · 404 unidades · Nunca reeditado</p>
-    </div>
+        <div class="footer-col">
+          <h5>Coleções</h5>
+          <a href="product.html">issue_001</a>
+          <span class="footer-disabled">Próximas coleções</span>
+        </div>
 
-    <div class="footer-col">
-      <h5>Coleções</h5>
-      <a href="product.html">issue_001</a>
-      <span class="footer-disabled">Próximas coleções</span>
-    </div>
+        <div class="footer-col">
+          <h5>Marca</h5>
+          <a href="about.html">Sobre</a>
+          <a href="#manifesto">Manifesto</a>
+        </div>
 
-    <div class="footer-col">
-      <h5>Marca</h5>
-      <a href="about.html">Sobre</a>
-      <a href="about.html#manifesto">Manifesto</a>
-    </div>
+        <div class="footer-col">
+          <h5>Redes sociais</h5>
+          <a href="https://www.instagram.com/error404label/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/share/1DkMzzcgKi/?mibextid=wwXIfr" target="_blank">Facebook</a>
+        </div>
 
-    <div class="footer-col">
-      <h5>Redes sociais</h5>
-      <a href="https://www.instagram.com/error404label/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/share/1DkMzzcgKi/?mibextid=wwXIfr" target="_blank">Facebook</a>
-    </div>
+        <div class="footer-col">
+          <h5>Idioma</h5>
+          <a href="index.html">🇬🇧 Inglês</a>
+          <a href="pt.html" class="active">🇵🇹 Português</a>
+        </div>
+      </div>
 
-    <div class="footer-col">
-      <h5>Idioma</h5>
-      <a href="index.html">🇬🇧 Inglês</a>
-      <a href="pt.html" class="active">🇵🇹 Português</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 ERROR 404 LABEL — Todos os direitos reservados
-  </div>
-</footer>
-
-
+      <div class="footer-bottom">
+        © 2026 ERROR 404 LABEL — Todos os direitos reservados
+      </div>
+    </footer>
 
   </div>
 
@@ -331,7 +387,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     elements.forEach(el => observer.observe(el));
   </script>
